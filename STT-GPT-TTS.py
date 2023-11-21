@@ -16,10 +16,10 @@ import subprocess
 
 from openai import AsyncOpenAI
 
-sclient = OpenAI()
-client = AsyncOpenAI(api_key="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")
-
 load_dotenv()
+
+sclient = OpenAI()
+client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
